@@ -1,1 +1,0 @@
-The Executor Agent builds the final LLM prompt using the planner’s plan, memory, and context. It then calls the Root Agent to obtain the domain-specific interview question.
