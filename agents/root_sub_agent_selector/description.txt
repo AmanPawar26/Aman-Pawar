@@ -1,0 +1,21 @@
+Root Interview Coordinator:
+Orchestrates the interview by first running the planner_executor_pipeline (Marcus → Sofia), then routing to the appropriate expert agent (Priya, James, or Aisha) based on Sofia's decision.
+
+Flow:
+1. Always calls planner_executor_pipeline first
+2. Checks state['executor_output']['action']
+3. If topic_selection: displays greeting and waits
+4. Otherwise: transfers to ONE expert agent (database_agent, api_agent, or cloud_agent)
+
+This ensures Marcus and Sofia always run sequentially, then only ONE expert responds per turn.
+```
+
+## The Architecture:
+```
+root_agent (LlmAgent with routing)
+├── planner_executor_pipeline (SequentialAgent - always runs first)
+│   ├── planner_agent (Marcus)
+│   └── executor_agent (Sofia)
+├── database_agent (Priya - conditional)
+├── api_agent (James - conditional)
+└── cloud_agent (Aisha - conditional)

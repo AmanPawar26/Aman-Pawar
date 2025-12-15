@@ -1,0 +1,1 @@
+The Cloud Expert Agent tests the user's understanding of cloud architecture, scalability, deployments, and infra fundamentals.

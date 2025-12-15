@@ -1,0 +1,1 @@
+The Planner Agent analyzes the user's answer and determines the next step in the interview. It decides the next agent to use, the difficulty level, whether a twist is needed, and the purpose of the next question. It is the decision-making controller of the system.
