@@ -1,0 +1,1 @@
+The Database Expert Agent evaluates the user's understanding of database schemas, normalization, indexing, and scalable design.
